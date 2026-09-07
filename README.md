@@ -1,175 +1,170 @@
 # Scrcpy Virtual Display
 
-Eine einfache Windows-App zur komfortablen Nutzung von [scrcpy](https://github.com/Genymobile/scrcpy) mit Android-Geräten.
+A simple Windows application for using [scrcpy](https://github.com/Genymobile/scrcpy) with Android devices.
 
-Die App bietet eine moderne Oberfläche, mit der sich scrcpy konfigurieren und direkt starten lässt. Zusätzlich kann ein separater **External-Modus** für die Verwendung eines virtuellen Android-Displays, z. B. mit Samsung DeX, verwendet werden.
+The application provides a modern Windows Forms interface for configuring and launching scrcpy. It also supports a separate **External Display mode**, which can be useful for **Samsung DeX** and other use cases that require a virtual Android display.
 
-## ✨ Funktionen
+## ✨ Features
 
-* 🪞 **Mirror-Modus**
+* 🪞 **Mirror Mode**
 
-  * Spiegelt den normalen Android-Bildschirm über scrcpy.
+  * Mirrors the normal Android screen in a scrcpy window.
 
-* 🖥️ **External-Modus**
+* 🖥️ **External Display Mode**
 
-  * Erstellt ein separates Android-Display.
-  * Besonders praktisch für **Samsung DeX** und ähnliche Anwendungsfälle.
+  * Creates a separate Android display.
+  * Especially useful for **Samsung DeX** and similar use cases.
 
-* ⚙️ **Setup-Assistent**
+* ⚙️ **Setup Wizard**
 
-  * Einfache Ersteinrichtung.
-  * Auswahl der scrcpy-Installation.
-  * Auflösung und DPI konfigurieren.
-  * Audio aktivieren/deaktivieren.
-  * Vollbildmodus konfigurieren.
-  * Optional eine Geräte-ID festlegen.
+  * Easy first-time configuration.
+  * Select your scrcpy installation.
+  * Configure resolution and DPI.
+  * Enable or disable audio.
+  * Enable fullscreen mode.
+  * Optionally specify a device ID.
 
-* 🔄 **Modus beim Start auswählen**
+* 🔄 **Choose Mode on Startup**
 
-  * Optional kann bei jedem Start zwischen Mirror und External gewählt werden.
+  * Optionally ask whether to use Mirror or External mode every time the application starts.
 
-* 💾 **Automatische Speicherung**
+* 💾 **Automatic Settings**
 
-  * Einstellungen werden lokal gespeichert und beim nächsten Start wieder geladen.
+  * Settings are stored locally and loaded automatically when the application starts.
 
 * 🧹 **ResetApp**
 
-  * Separate `ResetApp.exe`.
-  * Setzt die gespeicherten Einstellungen zurück.
-  * Beim nächsten Start wird der Setup-Assistent erneut angezeigt.
+  * A separate `ResetApp.exe`.
+  * Resets the saved application settings.
+  * The Setup Wizard will appear again on the next launch.
 
-* 🌑 **Modernes Design**
+* 🌑 **Modern Dark UI**
 
-  * Dunkle Oberfläche.
-  * Windows-11-inspirierte Optik.
-  * Abgerundete Buttons und Panels.
+  * Dark interface.
+  * Windows 11-inspired design.
+  * Rounded buttons and panels.
 
 ## 🗺️ Roadmap
 
-Aktuell liegt der Fokus auf der **Windows-Version**.
+The current version is available for **Windows**.
 
-Weitere Plattformen sind geplant:
+Planned platforms:
 
-* [x] 🪟 Windows
-* [ ] 🐧 Linux
-* [ ] 🍎 macOS
+* 🐧 **Linux**
+* 🍎 **macOS**
 
-> **Linux- und macOS-Versionen sind geplant und werden zukünftig hinzugefügt.**
+The goal is to make **Scrcpy Virtual Display** available across Windows, Linux, and macOS.
 
-Das Ziel ist, Scrcpy Virtual Display langfristig auf allen drei großen Desktop-Plattformen verfügbar zu machen.
+More features and platform support may be added in future releases.
 
-## 📋 Voraussetzungen
+## 📋 Requirements
 
-### Windows
-
-* Windows 10 oder Windows 11
-* x64-System
-* Android-Gerät mit aktiviertem **USB-Debugging**
+* Windows 10 or Windows 11
+* x64 system
+* Android device with **USB debugging** enabled
 * [scrcpy](https://github.com/Genymobile/scrcpy)
-* USB-Verbindung oder entsprechend konfigurierte ADB-Verbindung
-
-### Linux & macOS
-
-Linux- und macOS-Unterstützung befindet sich derzeit noch in Planung.
+* USB connection or a properly configured ADB connection
 
 ## 🚀 Installation
 
-1. Lade die aktuelle Release-Version herunter.
-2. Entpacke die Dateien.
-3. Stelle sicher, dass `scrcpy.exe` vorhanden ist.
-4. Starte:
+1. Download the latest release.
+2. Extract the files to a folder of your choice.
+3. Make sure `scrcpy.exe` is available.
+4. Start:
 
 ```text
 ScrcpyLauncher.exe
 ```
 
-5. Beim ersten Start öffnet sich automatisch der Setup-Assistent.
-6. Wähle den Speicherort deiner `scrcpy.exe`.
-7. Konfiguriere die gewünschten Einstellungen.
-8. Fertig.
+5. The Setup Wizard will automatically open on the first launch.
+6. Select the location of your `scrcpy.exe`.
+7. Configure your preferred settings.
+8. Done!
 
-## 📱 Android vorbereiten
+## 📱 Preparing Your Android Device
 
-Damit scrcpy das Gerät erkennen kann:
+To allow scrcpy to connect to your device:
 
-1. Öffne die Android-Einstellungen.
-2. Aktiviere die **Entwickleroptionen**.
-3. Aktiviere **USB-Debugging**.
-4. Verbinde das Smartphone mit dem PC.
-5. Bestätige gegebenenfalls die USB-Debugging-Abfrage.
+1. Open the Android settings.
+2. Enable **Developer Options**.
+3. Enable **USB Debugging**.
+4. Connect your Android device to your PC.
+5. Accept the USB debugging authorization prompt if it appears.
 
-Danach kann `ScrcpyLauncher.exe` das Gerät über scrcpy starten.
+You can then start the device through `ScrcpyLauncher.exe`.
 
-## 🖥️ Mirror-Modus
+## 🪞 Mirror Mode
 
-Im Mirror-Modus wird der normale Android-Bildschirm angezeigt.
+Mirror Mode displays the normal Android screen in a scrcpy window.
 
-```text
-Android
-   │
-   └──► scrcpy-Fenster auf Windows
-```
-
-## 🖥️ External-Modus
-
-Der External-Modus verwendet scrcpys virtuelle Display-Funktion:
+No additional display is created.
 
 ```text
-Android
-   │
-   └──► Neues virtuelles Display
-             │
-             └──► scrcpy
+Android Device
+      │
+      └──► scrcpy window on Windows
 ```
 
-Beispiel:
+## 🖥️ External Display Mode
+
+External Display Mode uses scrcpy's virtual display functionality:
+
+```text
+Android Device
+      │
+      └──► New virtual display
+                 │
+                 └──► scrcpy
+```
+
+For example, the following scrcpy option may be used:
 
 ```text
 --new-display=1920x1080/160
 ```
 
-Die Auflösung und DPI können im Setup konfiguriert werden.
+The resolution and DPI can be configured through the Setup Wizard.
 
-Der Modus eignet sich insbesondere für **Samsung DeX**.
+This mode is particularly useful for **Samsung DeX** and other applications that can make use of a separate Android display.
 
-## ⚙️ Einstellungen
+## ⚙️ Settings
 
-Die Einstellungen werden unter folgendem Windows-Pfad gespeichert:
+Settings are stored locally at:
 
 ```text
 %AppData%\ScrcpyVirtualDisplay\settings.json
 ```
 
-Gespeichert werden unter anderem:
+The following settings are stored:
 
-* scrcpy-Pfad
-* Display-Modus
-* Auflösung
+* scrcpy path
+* display mode
+* resolution
 * DPI
-* Audio
-* Vollbild
-* Geräte-ID
-* Auswahlabfrage beim Start
+* audio
+* fullscreen mode
+* device ID
+* startup mode selection
 
-## 🧹 Einstellungen zurücksetzen
+## 🧹 Reset Settings
 
-Wenn du die Konfiguration komplett zurücksetzen möchtest, starte:
+To completely reset the application configuration, run:
 
 ```text
 ResetApp.exe
 ```
 
-Die App löscht:
+The application removes:
 
 ```text
 %AppData%\ScrcpyVirtualDisplay\settings.json
 ```
 
-Beim nächsten Start von `ScrcpyLauncher.exe` wird der Setup-Assistent erneut angezeigt.
+The next time `ScrcpyLauncher.exe` is started, the Setup Wizard will appear again.
 
-**Hinweis:** `ResetApp.exe` löscht nicht deine scrcpy-Installation und keine persönlichen Android-Daten.
+**Note:** `ResetApp.exe` does not remove your scrcpy installation or any personal data on your Android device.
 
-## 📁 Projektstruktur
+## 📁 Project Structure
 
 ```text
 ScrcpyVirtualDisplay/
@@ -185,16 +180,16 @@ ScrcpyVirtualDisplay/
     └── ResetApp.csproj
 ```
 
-## 🔨 Build
+## 🔨 Building
 
-Das Projekt verwendet:
+The project currently uses:
 
 * C#
 * .NET 8
 * Windows Forms
 * Windows x64
 
-### Hauptprogramm
+### Main Application
 
 ```powershell
 dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
@@ -206,9 +201,11 @@ dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=
 dotnet publish .\ResetApp\ResetApp.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
 ```
 
+The applications are published as **self-contained executables**, so a separate .NET installation is not required on the target system.
+
 ## 📦 Release
 
-Eine fertige Windows-Version sollte mindestens enthalten:
+A release package should contain at least:
 
 ```text
 Scrcpy Virtual Display/
@@ -218,63 +215,64 @@ Scrcpy Virtual Display/
 └── README.md
 ```
 
-## 🛠️ Fehlerbehebung
+The scrcpy installation itself may be included separately depending on the distribution.
 
-### scrcpy.exe wurde nicht gefunden
+## 🛠️ Troubleshooting
 
-Öffne den Setup-Assistenten erneut und wähle den richtigen Pfad zu `scrcpy.exe`.
+### `scrcpy.exe` was not found
 
-### Android-Gerät wird nicht erkannt
+Open the Setup Wizard and select the correct path to `scrcpy.exe`.
 
-Überprüfe:
+### Android device is not detected
 
-* USB-Kabel
-* USB-Debugging
-* ADB-Treiber
-* USB-Debugging-Berechtigung auf dem Smartphone
+Check:
 
-Teste außerdem:
+* USB cable
+* USB Debugging
+* ADB drivers
+* USB debugging authorization on the Android device
+
+You can also check whether ADB detects your device:
 
 ```powershell
 adb devices
 ```
 
-### Setup erscheint nicht erneut
+### The Setup Wizard does not appear again
 
-Starte:
+Run:
 
 ```text
 ResetApp.exe
 ```
 
-Danach wird die gespeicherte Konfiguration gelöscht.
+This removes the saved configuration. The Setup Wizard will then appear the next time you launch the application.
 
-## 🔐 Sicherheit & Datenschutz
+## 🔐 Privacy
 
-Die App benötigt keine Cloud-Verbindung und speichert ihre Konfiguration lokal auf dem Windows-PC.
+The application does not require a cloud connection and stores its configuration locally on the Windows PC.
 
-Die App selbst sammelt keine persönlichen Daten.
+The application itself does not collect personal data.
 
-Die Kommunikation mit dem Android-Gerät erfolgt über **ADB/scrcpy**.
+Communication with the Android device is handled through **ADB/scrcpy**.
 
-## 📄 Lizenz
+## 📄 License
 
-Dieses Projekt ist unabhängig von scrcpy.
+This project is independent of scrcpy.
 
-`scrcpy` wird von **Genymobile** entwickelt.
+`scrcpy` is developed by **Genymobile**.
 
-Weitere Informationen und die Lizenz von scrcpy findest du im offiziellen Repository:
+For more information and the scrcpy license, visit the official repository:
 
 https://github.com/Genymobile/scrcpy
 
 ## ❤️ Credits
 
-* **Scrcpy** – Genymobile
-* **Scrcpy Virtual Display** – eigenes Launcher-/Konfigurationsprojekt
+* **scrcpy** – Genymobile
+* **Scrcpy Virtual Display** – Launcher and configuration application
 
 ---
 
 **Scrcpy Virtual Display**
-Eine einfache Möglichkeit, scrcpy komfortabler mit Mirror- und External-Display-Modi zu verwenden.
 
-**Plattform-Support:** Windows verfügbar · Linux & macOS geplant
+A simple way to use scrcpy on Windows with convenient Mirror and External Display modes, with **Linux and macOS support planned for future releases**.
