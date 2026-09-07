@@ -62,7 +62,7 @@ More features and platform support may be added in future releases.
 * Windows 10 or Windows 11
 * x64 system
 * Android device with **USB debugging** enabled
-* [scrcpy](https://github.com/Genymobile/scrcpy)
+* [scrcpy](https://github.com/Genymobile/scrcpy) **is included in the ZIP**
 * USB connection or a properly configured ADB connection
 
 ## 🚀 Installation
